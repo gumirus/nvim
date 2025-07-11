@@ -6,12 +6,14 @@
 
 ---
 
+> 🌐 Быстрые ссылки открывают PDF на GitHub (требуется интернет)
+
 ## 📚 Быстрые ссылки
 
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins.pdf">Все плагины (главная)</a><br>
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-git.pdf">Работа с git</a><br>
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-nvimtree.pdf">Файловый менеджер</a><br>
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-lsp.pdf">LSP и автодополнение</a>
+🌐 <a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins.pdf">Все плагины (главная)</a><br>
+🌐 <a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-git.pdf">Работа с git</a><br>
+🌐 <a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-nvimtree.pdf">Файловый менеджер</a><br>
+🌐 <a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-lsp.pdf">LSP и автодополнение</a>
 
 ---
 
@@ -64,12 +66,3 @@
 <div align="center">
 <span class="green">Подробная документация по UX-плагинам для Neovim gumirus</span>
 </div>
-
----
-
-## 📚 Быстрые ссылки
-
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins.pdf">Все плагины (главная)</a><br>
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-git.pdf">Работа с git</a><br>
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-nvimtree.pdf">Файловый менеджер</a><br>
-<a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-lsp.pdf">LSP и автодополнение</a>
