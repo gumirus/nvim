@@ -1,5 +1,13 @@
 # [Источник](https://www.josean.com/posts/how-to-setup-neovim-2024)
 
+[📄 PDF: Описание всех плагинов (цветной)](pdf/plugins.pdf)
+
+## 📚 Подробная документация
+
+- [Работа с git](pdf/plugins-git.pdf)
+- [Файловый менеджер](pdf/plugins-nvimtree.pdf)
+- [LSP и автодополнение](pdf/plugins-lsp.pdf)
+- [UX-плагины](pdf/plugins-ux.pdf)
 
 ## Есть немного настройки под себя
 
