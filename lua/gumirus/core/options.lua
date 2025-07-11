@@ -1,8 +1,8 @@
 local opt = vim.opt -- for conciseness
 
 -- line numbers
-opt.relativenumber = true -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.relativenumber = false -- отключить относительные номера
+opt.number = true -- показывать только абсолютные номера строк
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
