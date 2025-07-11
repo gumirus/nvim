@@ -388,7 +388,7 @@ Neovim позволяет выполнять большинство git-опер
 ### <span class="green">1. Быстрый старт: LazyGit</span>
 
 - Открой LazyGit прямо в Neovim:
-  - Нажми: <kbd>leader</kbd> + <kbd>gg</kbd> (обычно <kbd>\gg</kbd> или <kbd>,gg</kbd>)
+  - Нажми: <kbd>leader</kbd> + <kbd>gl</kbd>
 - Откроется полноценный git-интерфейс:
   - Смотри статус, коммить, пушь, переключай ветки, решай конфликты — всё мышкой или клавишами.
 - Выйти из LazyGit: <kbd>q</kbd>
@@ -422,7 +422,7 @@ Neovim позволяет выполнять большинство git-опер
 
 1. Сохрани файл: <kbd>:w</kbd>
 2. Stage через gitsigns: <kbd>leader</kbd> + <kbd>hs</kbd>
-3. Открой LazyGit (<kbd>leader</kbd> + <kbd>gg</kbd>), введи сообщение коммита и подтверди.
+3. Открой LazyGit (<kbd>leader</kbd> + <kbd>gl</kbd>), введи сообщение коммита и подтверди.
 
 #### Пушить изменения:
 
@@ -480,5 +480,33 @@ Neovim позволяет выполнять большинство git-опер
 - [GitHub Docs: Git workflows](https://docs.github.com/en/get-started/getting-started-with-git/git-workflows) — официальная документация по git-воркфлоу и best practices.
 
 - [GitHub Flow (англ.)](https://githubflow.github.io/) — современный подход к работе с git и GitHub.
+
+---
+
+# 🚀 Быстрая инструкция: Как закоммитить и запушить через LazyGit
+
+1. **Открой LazyGit**
+
+   - В Neovim: `:LazyGit` или `<leader>gl`
+   - В терминале: `lazygit`
+
+2. **Добавь нужные файлы в stage**
+
+   - Наведи на изменённый файл (стрелками).
+   - Нажми <kbd>space</kbd> — строка станет зелёной, появится S.
+
+3. **Сделай коммит**
+
+   - Нажми <kbd>c</kbd>.
+   - В верхнем поле напиши коротко, что изменилось (например, `fix: исправил ошибку`).
+   - Если нужно — <kbd>Tab</kbd> во второе поле, напиши детали.
+   - <kbd>Tab</kbd> до кнопки "Commit", ещё раз <kbd>Tab</kbd> (или <kbd>Enter</kbd>) — коммит сохранится.
+
+4. **Сделай push**
+
+   - Нажми <kbd>p</kbd> — изменения отправятся на GitHub.
+
+5. **Выйди из LazyGit**
+   - Нажми <kbd>q</kbd>.
 
 ---
