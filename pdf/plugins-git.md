@@ -178,13 +178,13 @@ git blame main.lua
 - [Git Tutorial for Beginners (ENG)](https://www.youtube.com/watch?v=JOIL6gof2BA)
 - [Git and GitHub Tutorial for Beginners [11 Hours] (ENG)](https://www.youtube.com/watch?v=3FKrszHcIsA)
 
-### <span class="orange">RuTube</span>
-
-- [PurpleSchool: Основы Git (2024, RUS)](https://rutracker.org/forum/viewtopic.php?t=6709081)
-
 ### <span class="orange">VK</span>
 
 - [Git для новичков — подборка видео](https://vk.com/video?q=git%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5)
+
+### <span class="orange">RuTube</span>
+
+- На RuTube актуальных видео по git пока нет, но можно искать по запросу: [git обучение](https://rutube.ru/search?query=git%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5)
 
 ### <span class="orange">Интерактивные тренажёры</span>
 
@@ -381,6 +381,104 @@ git show --name-only <commit-hash>
 
 ---
 
+## <span class="blue">Работа с Git прямо в Neovim</span>
+
+Neovim позволяет выполнять большинство git-операций, не выходя из редактора! Вот как это делается:
+
+### <span class="green">1. Быстрый старт: LazyGit</span>
+
+- Открой LazyGit прямо в Neovim:
+  - Нажми: <kbd>leader</kbd> + <kbd>gg</kbd> (обычно <kbd>\gg</kbd> или <kbd>,gg</kbd>)
+- Откроется полноценный git-интерфейс:
+  - Смотри статус, коммить, пушь, переключай ветки, решай конфликты — всё мышкой или клавишами.
+- Выйти из LazyGit: <kbd>q</kbd>
+
+**Совет:** LazyGit — лучший способ быстро разобраться с ветками, конфликтами и пушем.
+
+---
+
+### <span class="green">2. Gitsigns: Git прямо в коде</span>
+
+- В левой колонке появляются значки:
+  - <span style="color:lime">+</span> — добавлено
+  - <span style="color:orange">~</span> — изменено
+  - <span style="color:red">-</span> — удалено
+- Навигация по изменениям:
+  - <kbd>]c</kbd> — к следующему изменению
+  - <kbd>[c</kbd> — к предыдущему
+- Stage/unstage (добавить/убрать из индекса):
+  - <kbd>leader</kbd> + <kbd>hs</kbd> — stage hunk
+  - <kbd>leader</kbd> + <kbd>hr</kbd> — reset hunk
+- Просмотр diff:
+  - <kbd>leader</kbd> + <kbd>hd</kbd> — показать diff
+- Blame (кто изменил строку):
+  - <kbd>leader</kbd> + <kbd>hb</kbd> — показать blame для строки
+
+---
+
+### <span class="green">3. Основные сценарии работы с git в Neovim</span>
+
+#### Сохранить изменения и закоммитить:
+
+1. Сохрани файл: <kbd>:w</kbd>
+2. Stage через gitsigns: <kbd>leader</kbd> + <kbd>hs</kbd>
+3. Открой LazyGit (<kbd>leader</kbd> + <kbd>gg</kbd>), введи сообщение коммита и подтверди.
+
+#### Пушить изменения:
+
+- В LazyGit: выбери <kbd>Push</kbd> (или нажми <kbd>p</kbd>), подтверди.
+- Или в терминале Neovim: <kbd>:!git push</kbd>
+
+#### Откатить изменения:
+
+- Откатить hunk: <kbd>leader</kbd> + <kbd>hr</kbd>
+- Откатить файл: <kbd>:!git checkout -- %</kbd>
+- Откатить коммит: открой LazyGit → выбери коммит → <kbd>Reset</kbd>
+
+#### Переключиться на другую ветку:
+
+- В LazyGit: <kbd>b</kbd> (Branches) → выбери ветку → <kbd>Enter</kbd>
+- Или: <kbd>:!git checkout branchname</kbd>
+
+#### Смотреть diff и историю:
+
+- Diff текущего файла: <kbd>leader</kbd> + <kbd>hd</kbd>
+- История файла: <kbd>:!git log %</kbd>
+- Blame строки: <kbd>leader</kbd> + <kbd>hb</kbd>
+
+#### Решать конфликты:
+
+- В LazyGit: выбери конфликтующий файл → открой → выбери вариант (Current/Incoming/Both)
+- В Neovim: ищи <<<<<<<, =======, >>>>>>> и вручную редактируй
+
+---
+
+### <span class="green">4. Советы и лайфхаки</span>
+
+- Используй LazyGit для сложных операций (merge, rebase, reset, stash) — это быстрее и нагляднее.
+- Gitsigns удобен для быстрого stage/unstage и просмотра diff прямо в коде.
+- Все git-команды можно запускать прямо из Neovim через <kbd>:</kbd> (например, <kbd>:!git status</kbd>).
+- Для массового stage/unstage — выдели несколько файлов в LazyGit и нажми <kbd>space</kbd>.
+- Не забывай про <kbd>u</kbd> (undo) в LazyGit — можно отменить ошибочные действия.
+
+---
+
+**Теперь ты можешь делать всё с git, не выходя из Neovim!**
+
+---
+
 <div align="center">
 <span class="green">Подробная документация по git-плагинам для Neovim gumirus</span>
 </div>
+
+---
+
+## <span class="blue">🌐 Полезные гайды и ссылки</span>
+
+- [Neovim как IDE с git-интеграцией (GitHub, англ.)](https://github.com/rvbug/neovim) — подробный репозиторий с примерами, настройкой git-плагинов, горячими клавишами и советами по работе с git прямо в Neovim.
+
+- [GitHub Docs: Git workflows](https://docs.github.com/en/get-started/getting-started-with-git/git-workflows) — официальная документация по git-воркфлоу и best practices.
+
+- [GitHub Flow (англ.)](https://githubflow.github.io/) — современный подход к работе с git и GitHub.
+
+---
