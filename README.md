@@ -1,6 +1,7 @@
 # [Источник](https://www.josean.com/posts/how-to-setup-neovim-2024)
 
---- ## Есть немного настройки под себя
+
+## Есть немного настройки под себя
 
 ## Neovim Modern Config (gumirus)
 
