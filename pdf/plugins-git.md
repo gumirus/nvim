@@ -1,14 +1,10 @@
-<div align="center">
-
 # <span class="red">Работа с Git в Neovim</span>
-
-</div>
 
 ---
 
 > 🌐 Быстрые ссылки открывают PDF на GitHub (требуется интернет)
 
-## 📚 Быстрые ссылки
+## <span class="blue">📚 Быстрые ссылки</span>
 
 🌐 <a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins.pdf">Все плагины (главная)</a><br>
 🌐 <a href="https://github.com/gumirus/nvim/raw/main/pdf/plugins-nvimtree.pdf">Файловый менеджер</a><br>
@@ -42,8 +38,8 @@ Git — это современная система контроля верси
 - <kbd>]h</kbd> / <kbd>[h</kbd> — переход к следующему/предыдущему изменению
 - <kbd>&lt;leader&gt;hs</kbd> — добавить изменение в индекс (stage hunk)
 - <kbd>&lt;leader&gt;hr</kbd> — откатить изменение (reset hunk)
-- <kbd>&lt;leader&gt;hp</kbd> — показать diff
-- <kbd>&lt;leader&gt;hb</kbd> — blame для строки
+- <kbd>&lt;leader&gt;hp</kbd> — показать <span class="cmd">diff</span>
+- <kbd>&lt;leader&gt;hb</kbd> — <span class="cmd">blame</span> для строки
 
 **Совет:** Используй визуальный режим для stage/reset нескольких строк!
 
@@ -51,33 +47,33 @@ Git — это современная система контроля верси
 
 Мощный git-UI прямо в Neovim:
 
-- <kbd>Space</kbd> + <kbd>lg</kbd> — открыть lazygit
-- Просмотр истории, stage/unstage файлов и hunks, merge, rebase, push, pull — всё через удобный интерфейс
+- <kbd>Space</kbd> + <kbd>lg</kbd> — открыть <span class="cmd">lazygit</span>
+- Просмотр истории, <span class="cmd">stage/unstage</span> файлов и hunks, <span class="cmd">merge</span>, <span class="cmd">rebase</span>, <span class="cmd">push</span>, <span class="cmd">pull</span> — всё через удобный интерфейс
 
 ---
 
 ## <span class="blue">Основные команды Git</span>
 
-| Команда                | Описание                               |
-| ---------------------- | -------------------------------------- |
-| git init               | Инициализация репозитория              |
-| git clone URL          | Клонировать репозиторий                |
-| git status             | Текущее состояние файлов               |
-| git add file           | Добавить файл в индекс (stage)         |
-| git commit -m "msg"    | Зафиксировать изменения (commit)       |
-| git log                | История коммитов                       |
-| git diff               | Показать различия                      |
-| git branch             | Список веток                           |
-| git checkout branch    | Переключиться на ветку                 |
-| git merge branch       | Слить ветку                            |
-| git pull               | Получить и влить изменения с сервера   |
-| git push               | Отправить изменения на сервер          |
-| git stash              | Спрятать текущие изменения             |
-| git tag v1.0           | Создать тег                            |
-| git reset --hard HEAD^ | Откатить состояние на коммит назад     |
-| git rebase branch      | Перенести коммиты поверх другой ветки  |
-| git cherry-pick hash   | Взять отдельный коммит в текущую ветку |
-| git revert hash        | Откатить отдельный коммит              |
+| Команда                                         | Описание                               |
+| ----------------------------------------------- | -------------------------------------- |
+| <span class="cmd">git init</span>               | Инициализация репозитория              |
+| <span class="cmd">git clone URL</span>          | Клонировать репозиторий                |
+| <span class="cmd">git status</span>             | Текущее состояние файлов               |
+| <span class="cmd">git add file</span>           | Добавить файл в индекс (stage)         |
+| <span class="cmd">git commit -m "msg"</span>    | Зафиксировать изменения (commit)       |
+| <span class="cmd">git log</span>                | История коммитов                       |
+| <span class="cmd">git diff</span>               | Показать различия                      |
+| <span class="cmd">git branch</span>             | Список веток                           |
+| <span class="cmd">git checkout branch</span>    | Переключиться на ветку                 |
+| <span class="cmd">git merge branch</span>       | Слить ветку                            |
+| <span class="cmd">git pull</span>               | Получить и влить изменения с сервера   |
+| <span class="cmd">git push</span>               | Отправить изменения на сервер          |
+| <span class="cmd">git stash</span>              | Спрятать текущие изменения             |
+| <span class="cmd">git tag v1.0</span>           | Создать тег                            |
+| <span class="cmd">git reset --hard HEAD^</span> | Откатить состояние на коммит назад     |
+| <span class="cmd">git rebase branch</span>      | Перенести коммиты поверх другой ветки  |
+| <span class="cmd">git cherry-pick hash</span>   | Взять отдельный коммит в текущую ветку |
+| <span class="cmd">git revert hash</span>        | Откатить отдельный коммит              |
 
 ---
 
@@ -395,71 +391,45 @@ Neovim позволяет выполнять большинство git-опер
 
 **Совет:** LazyGit — лучший способ быстро разобраться с ветками, конфликтами и пушем.
 
----
+### <span class="green">Пошаговые пояснения к горячим клавишам</span>
 
-### <span class="green">2. Gitsigns: Git прямо в коде</span>
+- <kbd>&lt;leader&gt;gl</kbd> — **Открыть LazyGit**  
+  Откроет визуальный интерфейс для всех git-операций.  
+  _Используй для коммитов, push, переключения веток, решения конфликтов._
 
-- В левой колонке появляются значки:
-  - <span style="color:lime">+</span> — добавлено
-  - <span style="color:orange">~</span> — изменено
-  - <span style="color:red">-</span> — удалено
-- Навигация по изменениям:
-  - <kbd>]c</kbd> — к следующему изменению
-  - <kbd>[c</kbd> — к предыдущему
-- Stage/unstage (добавить/убрать из индекса):
-  - <kbd>leader</kbd> + <kbd>hs</kbd> — stage hunk
-  - <kbd>leader</kbd> + <kbd>hr</kbd> — reset hunk
-- Просмотр diff:
-  - <kbd>leader</kbd> + <kbd>hd</kbd> — показать diff
-- Blame (кто изменил строку):
-  - <kbd>leader</kbd> + <kbd>hb</kbd> — показать blame для строки
+- <kbd>&lt;leader&gt;gs</kbd> — **Показать/скрыть статус Gitsigns**  
+  Включает/выключает отображение изменений в левой колонке редактора.
 
----
+- <kbd>&lt;leader&gt;gp</kbd> — **Git push**  
+  Отправляет твои коммиты на сервер (GitHub, GitLab и т.д.).
 
-### <span class="green">3. Основные сценарии работы с git в Neovim</span>
+- <kbd>&lt;leader&gt;gc</kbd> — **Git commit**  
+  Открывает окно для ввода сообщения коммита.
 
-#### Сохранить изменения и закоммитить:
+- <kbd>&lt;leader&gt;gS</kbd> — **Stage текущий файл**  
+  Добавляет текущий файл в индекс (готов к коммиту).
 
-1. Сохрани файл: <kbd>:w</kbd>
-2. Stage через gitsigns: <kbd>leader</kbd> + <kbd>hs</kbd>
-3. Открой LazyGit (<kbd>leader</kbd> + <kbd>gl</kbd>), введи сообщение коммита и подтверди.
+- <kbd>&lt;leader&gt;gr</kbd> — **Откатить изменения в текущем файле**  
+  Возвращает файл к последнему коммиту.
 
-#### Пушить изменения:
+- <kbd>&lt;leader&gt;gd</kbd> — **Показать diff текущего файла**  
+  Сравнивает текущий файл с последним коммитом.
 
-- В LazyGit: выбери <kbd>Push</kbd> (или нажми <kbd>p</kbd>), подтверди.
-- Или в терминале Neovim: <kbd>:!git push</kbd>
+- <kbd>&lt;leader&gt;hb</kbd> — **Blame для строки**  
+  Показывает, кто и когда изменил текущую строку.
 
-#### Откатить изменения:
-
-- Откатить hunk: <kbd>leader</kbd> + <kbd>hr</kbd>
-- Откатить файл: <kbd>:!git checkout -- %</kbd>
-- Откатить коммит: открой LazyGit → выбери коммит → <kbd>Reset</kbd>
-
-#### Переключиться на другую ветку:
-
-- В LazyGit: <kbd>b</kbd> (Branches) → выбери ветку → <kbd>Enter</kbd>
-- Или: <kbd>:!git checkout branchname</kbd>
-
-#### Смотреть diff и историю:
-
-- Diff текущего файла: <kbd>leader</kbd> + <kbd>hd</kbd>
-- История файла: <kbd>:!git log %</kbd>
-- Blame строки: <kbd>leader</kbd> + <kbd>hb</kbd>
-
-#### Решать конфликты:
-
-- В LazyGit: выбери конфликтующий файл → открой → выбери вариант (Current/Incoming/Both)
-- В Neovim: ищи <<<<<<<, =======, >>>>>>> и вручную редактируй
+- <kbd>]h</kbd> / <kbd>[h</kbd> — **Навигация по изменениям (hunk)**  
+  Быстро переходи к следующему или предыдущему изменению в файле.
 
 ---
 
-### <span class="green">4. Советы и лайфхаки</span>
+### <span class="green">Советы и лайфхаки</span>
 
-- Используй LazyGit для сложных операций (merge, rebase, reset, stash) — это быстрее и нагляднее.
-- Gitsigns удобен для быстрого stage/unstage и просмотра diff прямо в коде.
-- Все git-команды можно запускать прямо из Neovim через <kbd>:</kbd> (например, <kbd>:!git status</kbd>).
-- Для массового stage/unstage — выдели несколько файлов в LazyGit и нажми <kbd>space</kbd>.
-- Не забывай про <kbd>u</kbd> (undo) в LazyGit — можно отменить ошибочные действия.
+- **Сохрани файл** перед git-операциями: <kbd>:w</kbd>
+- **Stage и commit** можно делать через LazyGit или Gitsigns — выбирай, что удобнее.
+- **Blame** помогает понять, кто внёс ошибку или важное изменение.
+- **Diff** — лучший способ быстро увидеть, что поменялось перед коммитом.
+- **Используй LazyGit** для сложных операций: rebase, merge, reset, stash.
 
 ---
 
@@ -510,3 +480,4 @@ Neovim позволяет выполнять большинство git-опер
    - Нажми <kbd>q</kbd>.
 
 ---
+ 

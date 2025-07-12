@@ -50,3 +50,4 @@
 <div align="center">
 <span class="green">Подробная документация по LSP и автодополнению для Neovim gumirus</span>
 </div>
+ 

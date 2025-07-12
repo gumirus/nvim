@@ -35,3 +35,14 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- Git keymaps
+keymap.set("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<cr>", { desc = "Toggle Gitsigns status" })
+keymap.set("n", "<leader>gp", "<cmd>!git push<CR>", { desc = "Git push" })
+keymap.set("n", "<leader>gP", "<cmd>!git push --set-upstream origin HEAD<CR>", { desc = "Git push upstream" })
+keymap.set("n", "<leader>gt", "<cmd>!echo 'Testing git push' && git push<CR>", { desc = "Test git push" })
+keymap.set("n", "<leader>gc", "<cmd>!git commit<CR>", { desc = "Git commit" })
+keymap.set("n", "<leader>gb", function() require('gitsigns').blame_line({ full = true }) end, { desc = "Git blame line" })
+keymap.set("n", "<leader>gd", function() require('gitsigns').diffthis() end, { desc = "Git diff this file" })
+keymap.set("n", "<leader>gr", function() require('gitsigns').reset_buffer() end, { desc = "Git reset buffer" })
+keymap.set("n", "<leader>gS", function() require('gitsigns').stage_buffer() end, { desc = "Git stage buffer" })

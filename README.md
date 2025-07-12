@@ -63,7 +63,7 @@
 - **telescope** — fuzzy-поиск
 - **treesitter** — современная подсветка синтаксиса
 - **gitsigns** — git-индикаторы и хоткеи
-- **lazygit** — интеграция с lazygit (<kbd>&lt;leader&gt;lg</kbd>)
+- **lazygit** — интеграция с lazygit (<kbd>&lt;leader&gt;gg</kbd>, <kbd>&lt;leader&gt;lg</kbd>)
 - **todo-comments** — подсветка TODO/FIXME
 - **trouble** — просмотр диагностик
 - **surround, substitute, autopairs, comment, bufferline, indent-blankline, vim-maximizer, alpha, auto-session, formatting, linting** — удобства и улучшения
@@ -91,6 +91,41 @@
 
 - Форматирование: <kbd>&lt;leader&gt;mp</kbd> (через conform.nvim)
 - Линтинг: <kbd>&lt;leader&gt;l</kbd> (через nvim-lint)
+
+## 🔧 Git и LazyGit
+
+### Основные команды LazyGit
+
+- <kbd>&lt;leader&gt;gg</kbd> — открыть LazyGit (главное окно)
+- <kbd>&lt;leader&gt;gc</kbd> — настройки LazyGit
+- <kbd>&lt;leader&gt;gf</kbd> — фильтр по истории коммитов
+- <kbd>&lt;leader&gt;gd</kbd> — история текущего файла
+- <kbd>&lt;leader&gt;gs</kbd> — создать stash
+- <kbd>&lt;leader&gt;gl</kbd> — просмотр логов коммитов
+
+### Клавиши внутри LazyGit
+
+- <kbd>Tab</kbd> — переключение между панелями (Файлы ↔ Ветки ↔ Коммиты)
+- <kbd>?</kbd> — показать все команды
+- <kbd>c</kbd> — создать коммит
+- <kbd>P</kbd> — push (отправить изменения)
+- <kbd>F</kbd> — pull (получить изменения)
+- <kbd>s</kbd> — создать stash
+- <kbd>m</kbd> — слить ветку (merge)
+- <kbd>r</kbd> — rebase
+- <kbd>d</kbd> — удалить ветку
+- <kbd>Space</kbd> — выбрать/добавить элемент
+- <kbd>e</kbd> — редактировать коммит
+
+### Gitsigns команды
+
+- <kbd>&lt;leader&gt;gs</kbd> — переключить статус gitsigns
+- <kbd>&lt;leader&gt;gp</kbd> — git push
+- <kbd>&lt;leader&gt;gc</kbd> — git commit
+- <kbd>&lt;leader&gt;gb</kbd> — git blame line
+- <kbd>&lt;leader&gt;gd</kbd> — git diff this file
+- <kbd>&lt;leader&gt;gr</kbd> — git reset buffer
+- <kbd>&lt;leader&gt;gS</kbd> — git stage buffer
 
 ## 🧠 Особенности
 

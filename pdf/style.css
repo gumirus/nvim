@@ -1,5 +1,5 @@
 body {
-  margin-top: 1.2em;
+  margin-top: 10px;
   margin-bottom: 2em;
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -10,7 +10,10 @@ body {
   color: #222;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin-top: 0.7em;
   margin-bottom: 0.4em;
   /* Было больше, теперь компактнее */
@@ -18,6 +21,7 @@ h1, h2, h3, h4 {
 
 h1 {
   color: #e53935;
+  font-size: 22px;
 }
 h2 {
   color: #1e88e5;
@@ -55,13 +59,13 @@ kbd {
   box-shadow: 1px 1px 2px #aaa;
 }
 /* Для центрированных блоков и заголовков */
-div[align="center"] {
+div[align='center'] {
   margin-top: 0.2em;
   margin-bottom: 0.5em;
 }
 
 /* Для финальных подписей */
-div[align="center"] span.green {
+div[align='center'] span.green {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
@@ -70,4 +74,53 @@ hr {
   border: none;
   border-top: 2px solid #e0e0e0;
   margin: 2em 0;
+}
+
+h1 span.red {
+  color: #f14c4c;
+}
+h2 span.blue,
+.blue {
+  color: #569cd6;
+}
+h3 span.green,
+.green {
+  color: #4ec9b0;
+}
+h3 span.orange,
+.orange {
+  color: #ffa500;
+}
+span.cmd {
+  background: #232136;
+  color: #82aaff;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', monospace;
+  font-size: 14px;
+}
+code,
+pre {
+  background: #232136 !important;
+  color: #82aaff !important;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', monospace;
+  font-size: 14px;
+}
+body,
+p,
+li,
+td,
+th,
+code,
+pre {
+  font-size: 16px;
+}
+h1 {
+  font-size: 18px;
+}
+h2,
+h3 {
+  font-size: 18px;
 }

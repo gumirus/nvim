@@ -51,3 +51,4 @@
 <div align="center">
 <span class="green">Подробная документация по nvim-tree для Neovim gumirus</span>
 </div>
+ 

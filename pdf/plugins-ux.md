@@ -66,3 +66,4 @@
 <div align="center">
 <span class="green">Подробная документация по UX-плагинам для Neovim gumirus</span>
 </div>
+ 

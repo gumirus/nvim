@@ -113,3 +113,4 @@
 <div align="center">
 <span class="green">Документация подготовлена для Neovim gumirus</span>
 </div>
+ 
