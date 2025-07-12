@@ -14,12 +14,7 @@ return {
   -- setting the keybinding for LazyGit with 'keys' is recommended in
   -- order to load the plugin when the command is run for the first time
   keys = {
-    { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open LazyGit" },
-    { "<leader>gg", "<cmd>LazyGit<CR>", desc = "Open LazyGit (main)" },
-    { "<leader>gc", "<cmd>LazyGitConfig<CR>", desc = "LazyGit Config" },
-    { "<leader>gf", "<cmd>LazyGitFilter<CR>", desc = "LazyGit Filter" },
-    { "<leader>gd", "<cmd>LazyGitFilterCurrentFile<CR>", desc = "LazyGit Current File" },
-    { "<leader>gl", "<cmd>LazyGit<CR>l", desc = "View Commit Log" },
+    { "<leader>lg", "<cmd>LazyGit<CR>", desc = "Open LazyGit" },
   },
   config = function()
     require("lazygit").setup({

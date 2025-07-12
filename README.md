@@ -63,7 +63,7 @@
 - **telescope** — fuzzy-поиск
 - **treesitter** — современная подсветка синтаксиса
 - **gitsigns** — git-индикаторы и хоткеи
-- **lazygit** — интеграция с lazygit (<kbd>&lt;leader&gt;gg</kbd>, <kbd>&lt;leader&gt;lg</kbd>)
+- **lazygit** — интеграция с lazygit (<kbd>&lt;leader&gt;gg</kbd>)
 - **todo-comments** — подсветка TODO/FIXME
 - **trouble** — просмотр диагностик
 - **surround, substitute, autopairs, comment, bufferline, indent-blankline, vim-maximizer, alpha, auto-session, formatting, linting** — удобства и улучшения
@@ -96,12 +96,7 @@
 
 ### Основные команды LazyGit
 
-- <kbd>&lt;leader&gt;gg</kbd> — открыть LazyGit (главное окно)
-- <kbd>&lt;leader&gt;gc</kbd> — настройки LazyGit
-- <kbd>&lt;leader&gt;gf</kbd> — фильтр по истории коммитов
-- <kbd>&lt;leader&gt;gd</kbd> — история текущего файла
-- <kbd>&lt;leader&gt;gs</kbd> — создать stash
-- <kbd>&lt;leader&gt;gl</kbd> — просмотр логов коммитов
+- <kbd>&lt;leader&gt;lg</kbd> — открыть LazyGit
 
 ### Клавиши внутри LazyGit
 
@@ -109,7 +104,7 @@
 - <kbd>?</kbd> — показать все команды
 - <kbd>c</kbd> — создать коммит
 - <kbd>P</kbd> — push (отправить изменения)
-- <kbd>F</kbd> — pull (получить изменения)
+- <kbd>p</kbd> — pull (получить изменения)
 - <kbd>s</kbd> — создать stash
 - <kbd>m</kbd> — слить ветку (merge)
 - <kbd>r</kbd> — rebase
